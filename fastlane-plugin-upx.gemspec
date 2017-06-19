@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = %q{remarr@gmail.com}
 
   spec.summary       = %q{the Ultimate Packer for eXecutables}
-  # spec.homepage      = "https://github.com/<GITHUB_USERNAME>/fastlane-plugin-upx"
+  spec.homepage      = "https://github.com/m4rr/fastlane-plugin-upx"
   spec.license       = "MIT"
 
   spec.files         = Dir["lib/**/*"] + %w(README.md LICENSE)
