@@ -12,8 +12,7 @@ module Fastlane
         cmd << "upx"
         cmd << project_name
 
-        # %x( upx ../`project_name` )
-        # Actions.sh(Shellwords.join(cmd))
+        Actions.sh(Shellwords.join(cmd)) # %x( upx ../`project_name` )
       end
 
       def self.description
