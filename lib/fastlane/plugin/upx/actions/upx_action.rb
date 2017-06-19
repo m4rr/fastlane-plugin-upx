@@ -30,7 +30,7 @@ module Fastlane
 
       def self.details
         # Optional:
-        "UPX is a free, portable, extendable, high-performance executable packer for several executable formats"
+        "UPX is a free, portable, extendable, high-performance executable packer for several executable formats. This plugin runs `upx` on your executable."
       end
 
       def self.available_options
