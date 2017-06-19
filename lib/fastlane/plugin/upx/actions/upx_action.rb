@@ -2,7 +2,18 @@ module Fastlane
   module Actions
     class UpxAction < Action
       def self.run(params)
+        require 'shellwords'
+
         UI.message("The upx plugin is working!")
+        project_name = Dir["*.xcodeproj"].first.split(".").first
+        UI.message(project_name)
+
+        cmd = []
+        cmd << "upx"
+        cmd << project_name
+
+        # %x( upx ../`project_name` )
+        # Actions.sh(Shellwords.join(cmd))
       end
 
       def self.description
@@ -33,11 +44,7 @@ module Fastlane
       end
 
       def self.is_supported?(platform)
-        # Adjust this if your plugin only works for a particular platform (iOS vs. Android, for example)
-        # See: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Platforms.md
-        #
-        # [:ios, :mac, :android].include?(platform)
-        true
+        [:mac].include?(platform)
       end
     end
   end
